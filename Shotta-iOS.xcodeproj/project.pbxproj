@@ -21,6 +21,8 @@
 		8A9671041F4C9687008947D0 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A9671021F4C9687008947D0 /* MainInterface.storyboard */; };
 		8A9671081F4C9687008947D0 /* Shotta Share.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8A9670FE1F4C9687008947D0 /* Shotta Share.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8A96710C1F4C96AC008947D0 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A4EA60C1F4C7AD900E61224 /* Alamofire.framework */; };
+		8A96710D1F4C9ACB008947D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A4EA5E51F4C79FB00E61224 /* Assets.xcassets */; };
+		8A96710F1F4CD409008947D0 /* ShottaUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A96710E1F4CD409008947D0 /* ShottaUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,7 @@
 		8A9671001F4C9687008947D0 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		8A9671031F4C9687008947D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		8A9671051F4C9687008947D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A96710E1F4CD409008947D0 /* ShottaUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShottaUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +158,7 @@
 		8A4EA5DD1F4C79FB00E61224 /* Shotta-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				8A96710E1F4CD409008947D0 /* ShottaUser.swift */,
 				8A9670E51F4C8D8C008947D0 /* Shotta-iOS.entitlements */,
 				8A4EA5DE1F4C79FB00E61224 /* AppDelegate.swift */,
 				8A4EA5E01F4C79FB00E61224 /* ViewController.swift */,
@@ -366,6 +370,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A96710D1F4C9ACB008947D0 /* Assets.xcassets in Resources */,
 				8A9671041F4C9687008947D0 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,6 +384,7 @@
 			files = (
 				8A4EA5E11F4C79FB00E61224 /* ViewController.swift in Sources */,
 				8A4EA5DF1F4C79FB00E61224 /* AppDelegate.swift in Sources */,
+				8A96710F1F4CD409008947D0 /* ShottaUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -650,6 +656,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Shotta-Share/Shotta Share.entitlements";
 				DEVELOPMENT_TEAM = JMQ9Y3A8K6;
+				ENABLE_ON_DEMAND_RESOURCES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Shotta-iOS",
@@ -668,6 +675,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Shotta-Share/Shotta Share.entitlements";
 				DEVELOPMENT_TEAM = JMQ9Y3A8K6;
+				ENABLE_ON_DEMAND_RESOURCES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Shotta-iOS",
