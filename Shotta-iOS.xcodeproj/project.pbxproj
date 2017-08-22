@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8A4EA5DF1F4C79FB00E61224 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4EA5DE1F4C79FB00E61224 /* AppDelegate.swift */; };
+		8A4EA5E11F4C79FB00E61224 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4EA5E01F4C79FB00E61224 /* ViewController.swift */; };
+		8A4EA5E41F4C79FB00E61224 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A4EA5E21F4C79FB00E61224 /* Main.storyboard */; };
+		8A4EA5E61F4C79FB00E61224 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A4EA5E51F4C79FB00E61224 /* Assets.xcassets */; };
+		8A4EA5E91F4C79FB00E61224 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A4EA5E71F4C79FB00E61224 /* LaunchScreen.storyboard */; };
+		8A4EA5F41F4C79FB00E61224 /* Shotta_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4EA5F31F4C79FB00E61224 /* Shotta_iOSTests.swift */; };
+		8A4EA5FF1F4C79FB00E61224 /* Shotta_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4EA5FE1F4C79FB00E61224 /* Shotta_iOSUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8A4EA5F01F4C79FB00E61224 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A4EA5D31F4C79FB00E61224 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A4EA5DA1F4C79FB00E61224;
+			remoteInfo = "Shotta-iOS";
+		};
+		8A4EA5FB1F4C79FB00E61224 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A4EA5D31F4C79FB00E61224 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A4EA5DA1F4C79FB00E61224;
+			remoteInfo = "Shotta-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8A4EA5DB1F4C79FB00E61224 /* Shotta-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shotta-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A4EA5DE1F4C79FB00E61224 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8A4EA5E01F4C79FB00E61224 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8A4EA5E31F4C79FB00E61224 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8A4EA5E51F4C79FB00E61224 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8A4EA5E81F4C79FB00E61224 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8A4EA5EA1F4C79FB00E61224 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A4EA5EF1F4C79FB00E61224 /* Shotta-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Shotta-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A4EA5F31F4C79FB00E61224 /* Shotta_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shotta_iOSTests.swift; sourceTree = "<group>"; };
+		8A4EA5F51F4C79FB00E61224 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A4EA5FA1F4C79FB00E61224 /* Shotta-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Shotta-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A4EA5FE1F4C79FB00E61224 /* Shotta_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shotta_iOSUITests.swift; sourceTree = "<group>"; };
+		8A4EA6001F4C79FB00E61224 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8A4EA5D81F4C79FB00E61224 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A4EA5EC1F4C79FB00E61224 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A4EA5F71F4C79FB00E61224 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8A4EA5D21F4C79FB00E61224 = {
+			isa = PBXGroup;
+			children = (
+				8A4EA5DD1F4C79FB00E61224 /* Shotta-iOS */,
+				8A4EA5F21F4C79FB00E61224 /* Shotta-iOSTests */,
+				8A4EA5FD1F4C79FB00E61224 /* Shotta-iOSUITests */,
+				8A4EA5DC1F4C79FB00E61224 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8A4EA5DC1F4C79FB00E61224 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A4EA5DB1F4C79FB00E61224 /* Shotta-iOS.app */,
+				8A4EA5EF1F4C79FB00E61224 /* Shotta-iOSTests.xctest */,
+				8A4EA5FA1F4C79FB00E61224 /* Shotta-iOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8A4EA5DD1F4C79FB00E61224 /* Shotta-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				8A4EA5DE1F4C79FB00E61224 /* AppDelegate.swift */,
+				8A4EA5E01F4C79FB00E61224 /* ViewController.swift */,
+				8A4EA5E21F4C79FB00E61224 /* Main.storyboard */,
+				8A4EA5E51F4C79FB00E61224 /* Assets.xcassets */,
+				8A4EA5E71F4C79FB00E61224 /* LaunchScreen.storyboard */,
+				8A4EA5EA1F4C79FB00E61224 /* Info.plist */,
+			);
+			path = "Shotta-iOS";
+			sourceTree = "<group>";
+		};
+		8A4EA5F21F4C79FB00E61224 /* Shotta-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				8A4EA5F31F4C79FB00E61224 /* Shotta_iOSTests.swift */,
+				8A4EA5F51F4C79FB00E61224 /* Info.plist */,
+			);
+			path = "Shotta-iOSTests";
+			sourceTree = "<group>";
+		};
+		8A4EA5FD1F4C79FB00E61224 /* Shotta-iOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8A4EA5FE1F4C79FB00E61224 /* Shotta_iOSUITests.swift */,
+				8A4EA6001F4C79FB00E61224 /* Info.plist */,
+			);
+			path = "Shotta-iOSUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8A4EA5DA1F4C79FB00E61224 /* Shotta-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A4EA6031F4C79FB00E61224 /* Build configuration list for PBXNativeTarget "Shotta-iOS" */;
+			buildPhases = (
+				8A4EA5D71F4C79FB00E61224 /* Sources */,
+				8A4EA5D81F4C79FB00E61224 /* Frameworks */,
+				8A4EA5D91F4C79FB00E61224 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Shotta-iOS";
+			productName = "Shotta-iOS";
+			productReference = 8A4EA5DB1F4C79FB00E61224 /* Shotta-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8A4EA5EE1F4C79FB00E61224 /* Shotta-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A4EA6061F4C79FB00E61224 /* Build configuration list for PBXNativeTarget "Shotta-iOSTests" */;
+			buildPhases = (
+				8A4EA5EB1F4C79FB00E61224 /* Sources */,
+				8A4EA5EC1F4C79FB00E61224 /* Frameworks */,
+				8A4EA5ED1F4C79FB00E61224 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A4EA5F11F4C79FB00E61224 /* PBXTargetDependency */,
+			);
+			name = "Shotta-iOSTests";
+			productName = "Shotta-iOSTests";
+			productReference = 8A4EA5EF1F4C79FB00E61224 /* Shotta-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8A4EA5F91F4C79FB00E61224 /* Shotta-iOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A4EA6091F4C79FB00E61224 /* Build configuration list for PBXNativeTarget "Shotta-iOSUITests" */;
+			buildPhases = (
+				8A4EA5F61F4C79FB00E61224 /* Sources */,
+				8A4EA5F71F4C79FB00E61224 /* Frameworks */,
+				8A4EA5F81F4C79FB00E61224 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A4EA5FC1F4C79FB00E61224 /* PBXTargetDependency */,
+			);
+			name = "Shotta-iOSUITests";
+			productName = "Shotta-iOSUITests";
+			productReference = 8A4EA5FA1F4C79FB00E61224 /* Shotta-iOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8A4EA5D31F4C79FB00E61224 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Keaton Burleson";
+				TargetAttributes = {
+					8A4EA5DA1F4C79FB00E61224 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = JMQ9Y3A8K6;
+						ProvisioningStyle = Automatic;
+					};
+					8A4EA5EE1F4C79FB00E61224 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = JMQ9Y3A8K6;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8A4EA5DA1F4C79FB00E61224;
+					};
+					8A4EA5F91F4C79FB00E61224 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = JMQ9Y3A8K6;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8A4EA5DA1F4C79FB00E61224;
+					};
+				};
+			};
+			buildConfigurationList = 8A4EA5D61F4C79FB00E61224 /* Build configuration list for PBXProject "Shotta-iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8A4EA5D21F4C79FB00E61224;
+			productRefGroup = 8A4EA5DC1F4C79FB00E61224 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8A4EA5DA1F4C79FB00E61224 /* Shotta-iOS */,
+				8A4EA5EE1F4C79FB00E61224 /* Shotta-iOSTests */,
+				8A4EA5F91F4C79FB00E61224 /* Shotta-iOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8A4EA5D91F4C79FB00E61224 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A4EA5E91F4C79FB00E61224 /* LaunchScreen.storyboard in Resources */,
+				8A4EA5E61F4C79FB00E61224 /* Assets.xcassets in Resources */,
+				8A4EA5E41F4C79FB00E61224 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A4EA5ED1F4C79FB00E61224 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A4EA5F81F4C79FB00E61224 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8A4EA5D71F4C79FB00E61224 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A4EA5E11F4C79FB00E61224 /* ViewController.swift in Sources */,
+				8A4EA5DF1F4C79FB00E61224 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A4EA5EB1F4C79FB00E61224 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A4EA5F41F4C79FB00E61224 /* Shotta_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A4EA5F61F4C79FB00E61224 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A4EA5FF1F4C79FB00E61224 /* Shotta_iOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8A4EA5F11F4C79FB00E61224 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A4EA5DA1F4C79FB00E61224 /* Shotta-iOS */;
+			targetProxy = 8A4EA5F01F4C79FB00E61224 /* PBXContainerItemProxy */;
+		};
+		8A4EA5FC1F4C79FB00E61224 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A4EA5DA1F4C79FB00E61224 /* Shotta-iOS */;
+			targetProxy = 8A4EA5FB1F4C79FB00E61224 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8A4EA5E21F4C79FB00E61224 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A4EA5E31F4C79FB00E61224 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8A4EA5E71F4C79FB00E61224 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A4EA5E81F4C79FB00E61224 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8A4EA6011F4C79FB00E61224 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8A4EA6021F4C79FB00E61224 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8A4EA6041F4C79FB00E61224 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JMQ9Y3A8K6;
+				INFOPLIST_FILE = "Shotta-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.keaton.Shotta-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		8A4EA6051F4C79FB00E61224 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JMQ9Y3A8K6;
+				INFOPLIST_FILE = "Shotta-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.keaton.Shotta-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		8A4EA6071F4C79FB00E61224 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = JMQ9Y3A8K6;
+				INFOPLIST_FILE = "Shotta-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.keaton.Shotta-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shotta-iOS.app/Shotta-iOS";
+			};
+			name = Debug;
+		};
+		8A4EA6081F4C79FB00E61224 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = JMQ9Y3A8K6;
+				INFOPLIST_FILE = "Shotta-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.keaton.Shotta-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shotta-iOS.app/Shotta-iOS";
+			};
+			name = Release;
+		};
+		8A4EA60A1F4C79FB00E61224 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = JMQ9Y3A8K6;
+				INFOPLIST_FILE = "Shotta-iOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.keaton.Shotta-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Shotta-iOS";
+			};
+			name = Debug;
+		};
+		8A4EA60B1F4C79FB00E61224 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = JMQ9Y3A8K6;
+				INFOPLIST_FILE = "Shotta-iOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.keaton.Shotta-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Shotta-iOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8A4EA5D61F4C79FB00E61224 /* Build configuration list for PBXProject "Shotta-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A4EA6011F4C79FB00E61224 /* Debug */,
+				8A4EA6021F4C79FB00E61224 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A4EA6031F4C79FB00E61224 /* Build configuration list for PBXNativeTarget "Shotta-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A4EA6041F4C79FB00E61224 /* Debug */,
+				8A4EA6051F4C79FB00E61224 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8A4EA6061F4C79FB00E61224 /* Build configuration list for PBXNativeTarget "Shotta-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A4EA6071F4C79FB00E61224 /* Debug */,
+				8A4EA6081F4C79FB00E61224 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8A4EA6091F4C79FB00E61224 /* Build configuration list for PBXNativeTarget "Shotta-iOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A4EA60A1F4C79FB00E61224 /* Debug */,
+				8A4EA60B1F4C79FB00E61224 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8A4EA5D31F4C79FB00E61224 /* Project object */;
+}
