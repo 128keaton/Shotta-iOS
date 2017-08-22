@@ -17,6 +17,10 @@
 		8A4EA60D1F4C7AD900E61224 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A4EA60C1F4C7AD900E61224 /* Alamofire.framework */; };
 		8A4EA60E1F4C7BB600E61224 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A4EA60C1F4C7AD900E61224 /* Alamofire.framework */; };
 		8A4EA60F1F4C7BB600E61224 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8A4EA60C1F4C7AD900E61224 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8A9671011F4C9687008947D0 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9671001F4C9687008947D0 /* ShareViewController.swift */; };
+		8A9671041F4C9687008947D0 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A9671021F4C9687008947D0 /* MainInterface.storyboard */; };
+		8A9671081F4C9687008947D0 /* Shotta Share.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8A9670FE1F4C9687008947D0 /* Shotta Share.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8A96710C1F4C96AC008947D0 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A4EA60C1F4C7AD900E61224 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,13 @@
 			remoteGlobalIDString = 8A4EA5DA1F4C79FB00E61224;
 			remoteInfo = "Shotta-iOS";
 		};
+		8A9671061F4C9687008947D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A4EA5D31F4C79FB00E61224 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A9670FD1F4C9687008947D0;
+			remoteInfo = "Shotta Share";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,10 +59,21 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8A9670E41F4C8D21008947D0 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8A9671081F4C9687008947D0 /* Shotta Share.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		8A4EA5DB1F4C79FB00E61224 /* Shotta-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shotta-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A4EA5DB1F4C79FB00E61224 /* Shotta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shotta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A4EA5DE1F4C79FB00E61224 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A4EA5E01F4C79FB00E61224 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8A4EA5E31F4C79FB00E61224 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -65,6 +87,12 @@
 		8A4EA5FE1F4C79FB00E61224 /* Shotta_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shotta_iOSUITests.swift; sourceTree = "<group>"; };
 		8A4EA6001F4C79FB00E61224 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A4EA60C1F4C7AD900E61224 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
+		8A9670E51F4C8D8C008947D0 /* Shotta-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Shotta-iOS.entitlements"; sourceTree = "<group>"; };
+		8A9670E71F4C91CE008947D0 /* Shotta Share.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = "Shotta Share.entitlements"; path = "../Shotta-Share/Shotta Share.entitlements"; sourceTree = "<group>"; };
+		8A9670FE1F4C9687008947D0 /* Shotta Share.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Shotta Share.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A9671001F4C9687008947D0 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		8A9671031F4C9687008947D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		8A9671051F4C9687008947D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +119,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8A9670FB1F4C9687008947D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A96710C1F4C96AC008947D0 /* Alamofire.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -100,6 +136,7 @@
 				8A4EA5DD1F4C79FB00E61224 /* Shotta-iOS */,
 				8A4EA5F21F4C79FB00E61224 /* Shotta-iOSTests */,
 				8A4EA5FD1F4C79FB00E61224 /* Shotta-iOSUITests */,
+				8A9670FF1F4C9687008947D0 /* Shotta Share */,
 				8A4EA5DC1F4C79FB00E61224 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -107,9 +144,10 @@
 		8A4EA5DC1F4C79FB00E61224 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8A4EA5DB1F4C79FB00E61224 /* Shotta-iOS.app */,
+				8A4EA5DB1F4C79FB00E61224 /* Shotta.app */,
 				8A4EA5EF1F4C79FB00E61224 /* Shotta-iOSTests.xctest */,
 				8A4EA5FA1F4C79FB00E61224 /* Shotta-iOSUITests.xctest */,
+				8A9670FE1F4C9687008947D0 /* Shotta Share.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,6 +155,7 @@
 		8A4EA5DD1F4C79FB00E61224 /* Shotta-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				8A9670E51F4C8D8C008947D0 /* Shotta-iOS.entitlements */,
 				8A4EA5DE1F4C79FB00E61224 /* AppDelegate.swift */,
 				8A4EA5E01F4C79FB00E61224 /* ViewController.swift */,
 				8A4EA5E21F4C79FB00E61224 /* Main.storyboard */,
@@ -146,25 +185,38 @@
 			path = "Shotta-iOSUITests";
 			sourceTree = "<group>";
 		};
+		8A9670FF1F4C9687008947D0 /* Shotta Share */ = {
+			isa = PBXGroup;
+			children = (
+				8A9670E71F4C91CE008947D0 /* Shotta Share.entitlements */,
+				8A9671001F4C9687008947D0 /* ShareViewController.swift */,
+				8A9671021F4C9687008947D0 /* MainInterface.storyboard */,
+				8A9671051F4C9687008947D0 /* Info.plist */,
+			);
+			path = "Shotta Share";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8A4EA5DA1F4C79FB00E61224 /* Shotta-iOS */ = {
+		8A4EA5DA1F4C79FB00E61224 /* Shotta */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8A4EA6031F4C79FB00E61224 /* Build configuration list for PBXNativeTarget "Shotta-iOS" */;
+			buildConfigurationList = 8A4EA6031F4C79FB00E61224 /* Build configuration list for PBXNativeTarget "Shotta" */;
 			buildPhases = (
 				8A4EA5D71F4C79FB00E61224 /* Sources */,
 				8A4EA5D81F4C79FB00E61224 /* Frameworks */,
 				8A4EA5D91F4C79FB00E61224 /* Resources */,
 				8A4EA6101F4C7BB600E61224 /* Embed Frameworks */,
+				8A9670E41F4C8D21008947D0 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8A9671071F4C9687008947D0 /* PBXTargetDependency */,
 			);
-			name = "Shotta-iOS";
+			name = Shotta;
 			productName = "Shotta-iOS";
-			productReference = 8A4EA5DB1F4C79FB00E61224 /* Shotta-iOS.app */;
+			productReference = 8A4EA5DB1F4C79FB00E61224 /* Shotta.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8A4EA5EE1F4C79FB00E61224 /* Shotta-iOSTests */ = {
@@ -203,6 +255,23 @@
 			productReference = 8A4EA5FA1F4C79FB00E61224 /* Shotta-iOSUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		8A9670FD1F4C9687008947D0 /* Shotta Share */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A9671091F4C9687008947D0 /* Build configuration list for PBXNativeTarget "Shotta Share" */;
+			buildPhases = (
+				8A9670FA1F4C9687008947D0 /* Sources */,
+				8A9670FB1F4C9687008947D0 /* Frameworks */,
+				8A9670FC1F4C9687008947D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Shotta Share";
+			productName = "Shotta Share";
+			productReference = 8A9670FE1F4C9687008947D0 /* Shotta Share.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -217,6 +286,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = JMQ9Y3A8K6;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					8A4EA5EE1F4C79FB00E61224 = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -229,6 +303,16 @@
 						DevelopmentTeam = JMQ9Y3A8K6;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 8A4EA5DA1F4C79FB00E61224;
+					};
+					8A9670FD1F4C9687008947D0 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = JMQ9Y3A8K6;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -245,9 +329,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8A4EA5DA1F4C79FB00E61224 /* Shotta-iOS */,
+				8A4EA5DA1F4C79FB00E61224 /* Shotta */,
 				8A4EA5EE1F4C79FB00E61224 /* Shotta-iOSTests */,
 				8A4EA5F91F4C79FB00E61224 /* Shotta-iOSUITests */,
+				8A9670FD1F4C9687008947D0 /* Shotta Share */,
 			);
 		};
 /* End PBXProject section */
@@ -274,6 +359,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A9670FC1F4C9687008947D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A9671041F4C9687008947D0 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,18 +398,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8A9670FA1F4C9687008947D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A9671011F4C9687008947D0 /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		8A4EA5F11F4C79FB00E61224 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8A4EA5DA1F4C79FB00E61224 /* Shotta-iOS */;
+			target = 8A4EA5DA1F4C79FB00E61224 /* Shotta */;
 			targetProxy = 8A4EA5F01F4C79FB00E61224 /* PBXContainerItemProxy */;
 		};
 		8A4EA5FC1F4C79FB00E61224 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8A4EA5DA1F4C79FB00E61224 /* Shotta-iOS */;
+			target = 8A4EA5DA1F4C79FB00E61224 /* Shotta */;
 			targetProxy = 8A4EA5FB1F4C79FB00E61224 /* PBXContainerItemProxy */;
+		};
+		8A9671071F4C9687008947D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A9670FD1F4C9687008947D0 /* Shotta Share */;
+			targetProxy = 8A9671061F4C9687008947D0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -335,6 +441,14 @@
 				8A4EA5E81F4C79FB00E61224 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8A9671021F4C9687008947D0 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A9671031F4C9687008947D0 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -438,7 +552,9 @@
 		8A4EA6041F4C79FB00E61224 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Shotta-iOS/Shotta-iOS.entitlements";
 				DEVELOPMENT_TEAM = JMQ9Y3A8K6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -455,7 +571,9 @@
 		8A4EA6051F4C79FB00E61224 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Shotta-iOS/Shotta-iOS.entitlements";
 				DEVELOPMENT_TEAM = JMQ9Y3A8K6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -527,6 +645,42 @@
 			};
 			name = Release;
 		};
+		8A96710A1F4C9687008947D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Shotta-Share/Shotta Share.entitlements";
+				DEVELOPMENT_TEAM = JMQ9Y3A8K6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Shotta-iOS",
+				);
+				INFOPLIST_FILE = "Shotta Share/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.keaton.Shotta-iOS.Shotta-Share";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		8A96710B1F4C9687008947D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Shotta-Share/Shotta Share.entitlements";
+				DEVELOPMENT_TEAM = JMQ9Y3A8K6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Shotta-iOS",
+				);
+				INFOPLIST_FILE = "Shotta Share/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.keaton.Shotta-iOS.Shotta-Share";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -539,13 +693,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8A4EA6031F4C79FB00E61224 /* Build configuration list for PBXNativeTarget "Shotta-iOS" */ = {
+		8A4EA6031F4C79FB00E61224 /* Build configuration list for PBXNativeTarget "Shotta" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8A4EA6041F4C79FB00E61224 /* Debug */,
 				8A4EA6051F4C79FB00E61224 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8A4EA6061F4C79FB00E61224 /* Build configuration list for PBXNativeTarget "Shotta-iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -554,12 +709,22 @@
 				8A4EA6081F4C79FB00E61224 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8A4EA6091F4C79FB00E61224 /* Build configuration list for PBXNativeTarget "Shotta-iOSUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8A4EA60A1F4C79FB00E61224 /* Debug */,
 				8A4EA60B1F4C79FB00E61224 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A9671091F4C9687008947D0 /* Build configuration list for PBXNativeTarget "Shotta Share" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A96710A1F4C9687008947D0 /* Debug */,
+				8A96710B1F4C9687008947D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

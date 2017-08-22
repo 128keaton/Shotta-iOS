@@ -43,6 +43,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             case .success:
                 if let data = response.result.value {
                     self.authToken = (data as! [String: String])["auth_token"]!
+                    let defaults = UserDefaults(suiteName: "group.shotta.image")
+                    defaults?.set(self.authToken!, forKey: "authToken")
+                    defaults?.synchronize()
+                    print("Synced auth token: \(String(describing: defaults?.object(forKey: "authToken")!))")
+
                 }
                 print(response)
 
@@ -52,6 +57,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 print(error)
             }
         }
+       
     }
 
     // Lists all the images associated with the account.

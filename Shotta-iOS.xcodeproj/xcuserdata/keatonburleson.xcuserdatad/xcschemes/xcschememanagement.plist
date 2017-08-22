@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Shotta Share.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Shotta-Share.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>Shotta-iOS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +33,21 @@
 			<true/>
 		</dict>
 		<key>8A4EA5F91F4C79FB00E61224</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8A9670D51F4C8D21008947D0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8A9670EB1F4C9662008947D0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8A9670FD1F4C9687008947D0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
