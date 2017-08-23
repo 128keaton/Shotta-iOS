@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-class ShottaImage: NSObject {
+class Shotta: NSObject {
     #if DEBUG
         fileprivate let urlString = "http://localhost:3000/api/v1/"
     #else
@@ -18,7 +18,8 @@ class ShottaImage: NSObject {
 
 
     fileprivate var user: ShottaUser? = nil
-
+    var delegate: ShottaDelegate? = nil
+    
     init(user: ShottaUser) {
         super.init()
         self.user = user
@@ -62,8 +63,9 @@ class ShottaImage: NSObject {
 
     }
 
+    
     // Get all images for user
-    public func getAllImages() throws -> [[String: Any]] {
+    public func getAllImages() throws{
         var headers: HTTPHeaders? = nil
 
         do {
@@ -71,9 +73,7 @@ class ShottaImage: NSObject {
         } catch _ {
             throw "Error getting headers"
         }
-
-        var imageArray: [[String: Any]]? = nil
-
+        
         Alamofire.request(urlString + "show", headers: headers)
             .responseJSON { response in
                 switch response.result {
@@ -81,8 +81,7 @@ class ShottaImage: NSObject {
                     #if DEBUG
                         print(response.result.value!)
                     #endif
-
-                    imageArray = response.result.value as? [[String: Any]]
+                    self.delegate?.imagesDidUpdate(images: response.result.value as! [[String: Any]])
                     break
                 case .failure(let error):
                     #if DEBUG
@@ -93,13 +92,12 @@ class ShottaImage: NSObject {
                 }
 
         }
-        guard let returnedArray = imageArray
-            else {
-                throw "Error with array"
-        }
-
-        return returnedArray
     }
 
 }
 extension String: Error { }
+
+protocol ShottaDelegate{
+    func imagesDidUpdate(images: [[String: Any]])
+}
+

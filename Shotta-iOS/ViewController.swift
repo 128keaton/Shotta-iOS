@@ -9,12 +9,11 @@
 import UIKit
 import Alamofire
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, ShottaDelegate {
 
     private let picker = UIImagePickerController()
 
     private var user: ShottaUser? = nil
-    private var userImage: ShottaImage? = nil
 
     @IBOutlet var sampleImageView: UIImageView?
 
@@ -27,6 +26,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func setupUser() {
         if self.user == nil {
             self.user = ShottaUser(email: "test.user@me.com", password: "abc123")
+            self.user?.setShottaDelegate(delegate: self)
         }
     }
     override func didReceiveMemoryWarning() {
@@ -49,18 +49,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
 
 
-
-    @IBAction func showLatestImage() {
-        do {
-            try self.user?.loadImages()
-        } catch _ {
-            print(user?.getState())
-            print("Error uploading image")
-        }
-        
-        let imageArray: [[String: Any]]! = self.user?.imageArray
-        if imageArray?.count != 0 {
-            let imageParent = imageArray?.last
+    func imagesDidUpdate(images: [[String: Any]]) {
+        if images.count != 0 {
+            let imageParent = images.last
             let imageObject = imageParent?["image"] as? [String: String]
             let imageUrl = imageObject?["url"]
 
@@ -70,6 +61,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
         }
     }
+
+    @IBAction func showLatestImage() {
+        self.user?.loadImages()
+    }
+    
     // Opens the image picker
     @IBAction func photoFromLibrary() {
         picker.allowsEditing = false

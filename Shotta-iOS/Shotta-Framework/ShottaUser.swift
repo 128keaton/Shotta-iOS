@@ -20,21 +20,20 @@ class ShottaUser: NSObject {
 
     private var state: ShottaState = .unauthenticated
     private var authToken: String? = nil
-    private var shottaImage: ShottaImage? = nil
-
-    public private(set) var imageArray: [[String: Any]]? = nil
+    private var shotta: Shotta? = nil
 
     // Initializers
     init(email: String, password: String) {
         super.init()
         self.login(email: email, password: password)
     }
-    
-    private func setupImage(){
-        if shottaImage == nil{
-            self.shottaImage = ShottaImage(user: self)
+
+    private func setupShotta() {
+        if shotta == nil {
+            self.shotta = Shotta(user: self)
         }
     }
+    
 
     // Authentication Token
     public func getAuthToken() -> String? {
@@ -48,35 +47,30 @@ class ShottaUser: NSObject {
     public func getState() -> ShottaState {
         return self.state
     }
-    public func uploadImage(image: UIImage) throws{
+    
+    public func setShottaDelegate(delegate: ShottaDelegate){
+        self.setupShotta()
+        self.shotta?.delegate = delegate
+    }
+    
+    public func uploadImage(image: UIImage) throws {
         if self.state == .authenticated {
-            setupImage()
             let data = UIImagePNGRepresentation(image)
             do {
-                try self.shottaImage?.uploadImageData(data: data!)
+                try self.shotta?.uploadImageData(data: data!)
             } catch _ {
                 throw "Error setting array to user"
             }
-            
-        }else{
+
+        } else {
             throw "User not authenticated"
         }
 
     }
 
-    // Get images
-    public func loadImages() throws {
+    public func loadImages() {
         if self.state == .authenticated {
-            setupImage()
-            do {
-                try imageArray = self.shottaImage?.getAllImages()
-                
-            } catch _ {
-                throw "Error setting array to user"
-            }
-
-        }else{
-            throw "User not authenticated"
+            try! self.shotta?.getAllImages()
         }
     }
 
