@@ -38,7 +38,7 @@ class TileViewController: UICollectionViewController, ShottaDelegate, UIImagePic
             self.shottaUser?.delegate = self
         } else if self.shottaUser == nil && defaults.object(forKey: "auth-token") == nil {
             self.performSegue(withIdentifier: "showLogin", sender: self)
-        }else if self.shottaUser != nil{
+        } else if self.shottaUser != nil {
             self.shottaUser?.setShottaDelegate(delegate: self)
             self.shottaUser?.delegate = self
             self.shottaUser?.loadImages()
@@ -95,9 +95,15 @@ class TileViewController: UICollectionViewController, ShottaDelegate, UIImagePic
         }
     }
 
+    // I am lazy
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch: UITouch? = touches.first
+        if touch?.view?.tag == 101 {
+            touch?.view?.removeFromSuperview()
+        }
+    }
+
     // Delegate: UICollectionViewControllerDataSource
-
-
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -117,6 +123,18 @@ class TileViewController: UICollectionViewController, ShottaDelegate, UIImagePic
         }
 
         return cell
+    }
+
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let imageView = UIImageView(frame: collectionView.frame)
+        imageView.contentMode = .scaleAspectFit
+        imageView.tag = 101
+        imageView.isUserInteractionEnabled = true
+        imageView.backgroundColor = UIColor.black
+
+        let cell = self.collectionView?.cellForItem(at: indexPath) as! TileCell
+        imageView.image = cell.imageView.image
+        self.view.addSubview(imageView)
     }
 
     // Delegate: UIImagePickerController

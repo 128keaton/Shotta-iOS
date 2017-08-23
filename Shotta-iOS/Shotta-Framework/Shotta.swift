@@ -63,9 +63,9 @@ class Shotta: NSObject {
 
     }
 
-    public func tokenIsValid(_ authToken: String, completionHandler: @escaping (Bool?, Error?) -> ()) {
+    public func tokenIsValid(_ theAuthToken: String, completionHandler: @escaping (Bool?, Error?) -> ()) {
         let headers: HTTPHeaders = [
-            "X-AUTH-TOKEN": authToken,
+            "X-AUTH-TOKEN": theAuthToken,
             "Accept": "application/json"
         ]
         Alamofire.request(urlString + "show", headers: headers)

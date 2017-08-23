@@ -29,26 +29,27 @@ class ShottaUser: NSObject {
         self.login(email: email, password: password)
     }
 
-    init(authToken: String){
+    init(authToken: String) {
         super.init()
         self.setupShotta()
         self.shotta?.tokenIsValid(authToken, completionHandler: { (isValid, error) in
-            if isValid == true && error == nil{
+            if isValid == true && error == nil {
                 self.state = .authenticated
+                self.setAuthToken(token: authToken)
                 self.delegate?.authenticationChanged(state: self.state)
-            }else{
+            } else {
                 self.delegate?.authenticationChanged(state: self.state)
             }
         })
- 
+
     }
-    
+
     private func setupShotta() {
         if shotta == nil {
             self.shotta = Shotta(user: self)
         }
     }
-    
+
 
     // Authentication Token
     public func getAuthToken() -> String? {
@@ -62,12 +63,12 @@ class ShottaUser: NSObject {
     public func getState() -> ShottaState {
         return self.state
     }
-    
-    public func setShottaDelegate(delegate: ShottaDelegate){
+
+    public func setShottaDelegate(delegate: ShottaDelegate) {
         self.setupShotta()
         self.shotta?.delegate = delegate
     }
-    
+
     public func uploadImage(image: UIImage) throws {
         if self.state == .authenticated {
             let data = UIImagePNGRepresentation(image)
@@ -103,7 +104,7 @@ class ShottaUser: NSObject {
                     print(response)
                 #endif
                 self.state = .authenticated
-                
+
                 break
             case .failure(let error):
                 #if DEBUG
