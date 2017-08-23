@@ -23,6 +23,7 @@
 		8AF13F141F4E0C0100F0943B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AF13F121F4E0BF200F0943B /* Alamofire.framework */; };
 		8AF13F171F4E11AC00F0943B /* TileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF13F161F4E11AC00F0943B /* TileViewController.swift */; };
 		8AF13F191F4E136C00F0943B /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF13F181F4E136C00F0943B /* ImageCell.swift */; };
+		8AF13F391F4E1DBF00F0943B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF13F381F4E1DBF00F0943B /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		8AF13F121F4E0BF200F0943B /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		8AF13F161F4E11AC00F0943B /* TileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileViewController.swift; sourceTree = "<group>"; };
 		8AF13F181F4E136C00F0943B /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		8AF13F381F4E1DBF00F0943B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 				8A4EA5DE1F4C79FB00E61224 /* AppDelegate.swift */,
 				8AF13F181F4E136C00F0943B /* ImageCell.swift */,
 				8AF13F161F4E11AC00F0943B /* TileViewController.swift */,
+				8AF13F381F4E1DBF00F0943B /* LoginViewController.swift */,
 				8A4EA5E21F4C79FB00E61224 /* Main.storyboard */,
 				8A4EA5E71F4C79FB00E61224 /* LaunchScreen.storyboard */,
 				8A9670E51F4C8D8C008947D0 /* Shotta-iOS.entitlements */,
@@ -408,6 +411,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AF13F391F4E1DBF00F0943B /* LoginViewController.swift in Sources */,
 				8A4EA5DF1F4C79FB00E61224 /* AppDelegate.swift in Sources */,
 				8A9671111F4DE575008947D0 /* Shotta.swift in Sources */,
 				8A96710F1F4CD409008947D0 /* ShottaUser.swift in Sources */,

@@ -63,6 +63,31 @@ class Shotta: NSObject {
 
     }
 
+    public func tokenIsValid(_ authToken: String, completionHandler: @escaping (Bool?, Error?) -> ()) {
+        let headers: HTTPHeaders = [
+            "X-AUTH-TOKEN": authToken,
+            "Accept": "application/json"
+        ]
+        Alamofire.request(urlString + "show", headers: headers)
+            .responseJSON { response in
+                switch response.result {
+                case .success:
+                    #if DEBUG
+                        print(response.result.value!)
+                    #endif
+                    completionHandler(true, nil)
+                    break
+                case .failure(let error):
+                    #if DEBUG
+                        print(error)
+                    #endif
+                    completionHandler(false, error)
+                    break
+                }
+                
+        }
+        
+    }
     
     // Get all images for user
     public func getAllImages() throws{

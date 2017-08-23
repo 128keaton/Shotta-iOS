@@ -22,15 +22,26 @@ class TileViewController: UICollectionViewController, ShottaDelegate, UIImagePic
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollection()
+        NotificationCenter.default.addObserver(self, selector: #selector(TileViewController.setupShottaUser), name: NSNotification.Name(rawValue: "login-completed"), object: nil)
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
         setupShottaUser()
     }
 
     // Initializers
-    private func setupShottaUser() {
-        if self.shottaUser == nil {
-            self.shottaUser = ShottaUser(email: "test.user@me.com", password: "abc123")
+    @objc private func setupShottaUser() {
+        let defaults = UserDefaults.standard
+        if self.shottaUser == nil && defaults.object(forKey: "auth-token") != nil {
+            self.shottaUser = ShottaUser(authToken: defaults.object(forKey: "auth-token") as! String)
             self.shottaUser?.setShottaDelegate(delegate: self)
             self.shottaUser?.delegate = self
+        } else if self.shottaUser == nil && defaults.object(forKey: "auth-token") == nil {
+            self.performSegue(withIdentifier: "showLogin", sender: self)
+        }else if self.shottaUser != nil{
+            self.shottaUser?.setShottaDelegate(delegate: self)
+            self.shottaUser?.delegate = self
+            self.shottaUser?.loadImages()
         }
     }
 
@@ -52,19 +63,19 @@ class TileViewController: UICollectionViewController, ShottaDelegate, UIImagePic
         }
 
     }
-    
-    func setupCollection(){
+
+    func setupCollection() {
         let layout = UICollectionViewFlowLayout()
         let collectionViewSize = collectionView?.frame.size
-        
+
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
-        
+
         let cellsPerRow: CGFloat = 3.0
-        let itemSize = (collectionViewSize?.width)!/cellsPerRow
-   
+        let itemSize = (collectionViewSize?.width)! / cellsPerRow
+
         layout.itemSize = CGSize(width: itemSize, height: itemSize)
-        
+
         collectionView!.collectionViewLayout = layout
     }
 
@@ -86,7 +97,7 @@ class TileViewController: UICollectionViewController, ShottaDelegate, UIImagePic
 
     // Delegate: UICollectionViewControllerDataSource
 
-    
+
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }

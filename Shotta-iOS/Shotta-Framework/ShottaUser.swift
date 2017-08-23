@@ -29,6 +29,20 @@ class ShottaUser: NSObject {
         self.login(email: email, password: password)
     }
 
+    init(authToken: String){
+        super.init()
+        self.setupShotta()
+        self.shotta?.tokenIsValid(authToken, completionHandler: { (isValid, error) in
+            if isValid == true && error == nil{
+                self.state = .authenticated
+                self.delegate?.authenticationChanged(state: self.state)
+            }else{
+                self.delegate?.authenticationChanged(state: self.state)
+            }
+        })
+ 
+    }
+    
     private func setupShotta() {
         if shotta == nil {
             self.shotta = Shotta(user: self)
