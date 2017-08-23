@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Shotta_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Shotta" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -26,7 +26,7 @@
                                 <rect key="frame" x="16" y="28" width="30" height="30"/>
                                 <state key="normal" title="List"/>
                                 <connections>
-                                    <action selector="showTest" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZOp-FV-VpT"/>
+                                    <action selector="showLatestImage" destination="BYZ-38-t0r" eventType="touchUpInside" id="VxW-du-Iwa"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xYs-fw-oRi">

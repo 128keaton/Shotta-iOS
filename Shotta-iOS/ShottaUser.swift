@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import UIKit
 
 class ShottaUser: NSObject {
 
@@ -16,17 +17,26 @@ class ShottaUser: NSObject {
     #else
         private let urlString = "http://shotta.128keaton.com/api/v1/"
     #endif
-    
+
     private var state: ShottaState = .unauthenticated
     private var authToken: String? = nil
+    private var shottaImage: ShottaImage? = nil
 
-    /* Initializers */
+    public private(set) var imageArray: [[String: Any]]? = nil
+
+    // Initializers
     init(email: String, password: String) {
         super.init()
         self.login(email: email, password: password)
     }
+    
+    private func setupImage(){
+        if shottaImage == nil{
+            self.shottaImage = ShottaImage(user: self)
+        }
+    }
 
-    /* Authentication Token */
+    // Authentication Token
     public func getAuthToken() -> String? {
         return self.authToken
     }
@@ -34,12 +44,43 @@ class ShottaUser: NSObject {
         self.authToken = token
     }
 
-    /* State */
-    public func getState() -> ShottaState{
+    // State
+    public func getState() -> ShottaState {
         return self.state
     }
-    
-    /* Login/Logout */
+    public func uploadImage(image: UIImage) throws{
+        if self.state == .authenticated {
+            setupImage()
+            let data = UIImagePNGRepresentation(image)
+            do {
+                try self.shottaImage?.uploadImageData(data: data!)
+            } catch _ {
+                throw "Error setting array to user"
+            }
+            
+        }else{
+            throw "User not authenticated"
+        }
+
+    }
+
+    // Get images
+    public func loadImages() throws {
+        if self.state == .authenticated {
+            setupImage()
+            do {
+                try imageArray = self.shottaImage?.getAllImages()
+                
+            } catch _ {
+                throw "Error setting array to user"
+            }
+
+        }else{
+            throw "User not authenticated"
+        }
+    }
+
+    // Login/Logout
     private func login(email: String, password: String) {
         let loginParameters = ["user_login[email]": email, "user_login[password]": password]
         Alamofire.request(urlString + "sign-in", method: .post, parameters: loginParameters, encoding: URLEncoding.default, headers: nil).responseJSON {

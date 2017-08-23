@@ -23,6 +23,7 @@
 		8A96710C1F4C96AC008947D0 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A4EA60C1F4C7AD900E61224 /* Alamofire.framework */; };
 		8A96710D1F4C9ACB008947D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A4EA5E51F4C79FB00E61224 /* Assets.xcassets */; };
 		8A96710F1F4CD409008947D0 /* ShottaUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A96710E1F4CD409008947D0 /* ShottaUser.swift */; };
+		8A9671111F4DE575008947D0 /* ShottaImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9671101F4DE575008947D0 /* ShottaImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		8A9671031F4C9687008947D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		8A9671051F4C9687008947D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A96710E1F4CD409008947D0 /* ShottaUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShottaUser.swift; sourceTree = "<group>"; };
+		8A9671101F4DE575008947D0 /* ShottaImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShottaImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				8A96710E1F4CD409008947D0 /* ShottaUser.swift */,
+				8A9671101F4DE575008947D0 /* ShottaImage.swift */,
 				8A9670E51F4C8D8C008947D0 /* Shotta-iOS.entitlements */,
 				8A4EA5DE1F4C79FB00E61224 /* AppDelegate.swift */,
 				8A4EA5E01F4C79FB00E61224 /* ViewController.swift */,
@@ -384,6 +387,7 @@
 			files = (
 				8A4EA5E11F4C79FB00E61224 /* ViewController.swift in Sources */,
 				8A4EA5DF1F4C79FB00E61224 /* AppDelegate.swift in Sources */,
+				8A9671111F4DE575008947D0 /* ShottaImage.swift in Sources */,
 				8A96710F1F4CD409008947D0 /* ShottaUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
