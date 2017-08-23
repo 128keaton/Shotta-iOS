@@ -87,7 +87,6 @@ class Shotta: NSObject {
                     #if DEBUG
                         print(error)
                     #endif
-
                     break
                 }
 
@@ -97,6 +96,7 @@ class Shotta: NSObject {
 }
 extension String: Error { }
 
+// Define ShottaDelegate
 protocol ShottaDelegate{
     func imagesDidUpdate(images: [[String: Any]])
 }

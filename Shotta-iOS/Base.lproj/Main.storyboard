@@ -1,64 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="18h-Ra-4db">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Shotta-->
+        <scene sceneID="LDD-jw-UGM">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Shotta" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <collectionViewController id="I0Q-sb-aWZ" customClass="TileViewController" customModule="Shotta" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="uem-36-1fn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdg-da-9FZ">
-                                <rect key="frame" x="16" y="28" width="30" height="30"/>
-                                <state key="normal" title="List"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lcd-Sm-V7n">
+                            <size key="itemSize" width="110" height="110"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="imageCell" id="zXm-e0-jbS" customClass="TileCell" customModule="Shotta" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jbW-qO-gqW">
+                                            <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="jbW-qO-gqW" firstAttribute="centerX" secondItem="zXm-e0-jbS" secondAttribute="centerX" id="DYh-t6-EC6"/>
+                                    <constraint firstItem="jbW-qO-gqW" firstAttribute="width" secondItem="zXm-e0-jbS" secondAttribute="width" id="Ld9-dp-P7x"/>
+                                    <constraint firstItem="jbW-qO-gqW" firstAttribute="centerY" secondItem="zXm-e0-jbS" secondAttribute="centerY" id="VpK-EX-lUn"/>
+                                    <constraint firstItem="jbW-qO-gqW" firstAttribute="height" secondItem="zXm-e0-jbS" secondAttribute="height" id="ua5-7l-yf2"/>
+                                </constraints>
+                                <size key="customSize" width="110" height="110"/>
                                 <connections>
-                                    <action selector="showLatestImage" destination="BYZ-38-t0r" eventType="touchUpInside" id="VxW-du-Iwa"/>
+                                    <outlet property="imageView" destination="jbW-qO-gqW" id="3WB-hL-gMw"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xYs-fw-oRi">
-                                <rect key="frame" x="309" y="28" width="50" height="30"/>
-                                <state key="normal" title="Upload"/>
-                                <connections>
-                                    <action selector="photoFromLibrary" destination="BYZ-38-t0r" eventType="touchUpInside" id="XfP-df-KdU"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nlg-Uo-Flj">
-                                <rect key="frame" x="68" y="219" width="239" height="228"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="Nlg-Uo-Flj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="199" id="PLA-72-ZHh"/>
-                            <constraint firstItem="wdg-da-9FZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ShZ-cv-rfl"/>
-                            <constraint firstItem="Nlg-Uo-Flj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="52" id="ckv-lN-zo3"/>
-                            <constraint firstItem="xYs-fw-oRi" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="p2R-IB-HoE"/>
-                            <constraint firstItem="Nlg-Uo-Flj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wBy-th-Ij2"/>
-                            <constraint firstItem="wdg-da-9FZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="zCL-xz-i5B"/>
-                            <constraint firstItem="Nlg-Uo-Flj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zH8-HY-YIF"/>
-                            <constraint firstItem="wdg-da-9FZ" firstAttribute="baseline" secondItem="xYs-fw-oRi" secondAttribute="baseline" id="zwJ-PP-tH4"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="sampleImageView" destination="Nlg-Uo-Flj" id="1hc-Jo-8Nh"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="I0Q-sb-aWZ" id="8UH-Xj-XUc"/>
+                            <outlet property="delegate" destination="I0Q-sb-aWZ" id="LWx-Xg-5cj"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Shotta" id="BVR-2g-8mw">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="edw-rj-rzm">
+                            <connections>
+                                <action selector="openImagePicker" destination="I0Q-sb-aWZ" id="qds-Qe-dDK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8AR-Ln-pL7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24.800000000000001" y="36.431784107946029"/>
+            <point key="canvasLocation" x="319.19999999999999" y="46.326836581709152"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Grf-Hd-ZLo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="18h-Ra-4db" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qBY-Gn-8hn">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="I0Q-sb-aWZ" kind="relationship" relationship="rootViewController" id="fCB-KT-r3N"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wf4-Nv-NDU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-487" y="46"/>
         </scene>
     </scenes>
 </document>

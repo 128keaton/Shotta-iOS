@@ -21,6 +21,7 @@ class ShottaUser: NSObject {
     private var state: ShottaState = .unauthenticated
     private var authToken: String? = nil
     private var shotta: Shotta? = nil
+    public var delegate: ShottaUserDelegate? = nil
 
     // Initializers
     init(email: String, password: String) {
@@ -88,6 +89,7 @@ class ShottaUser: NSObject {
                     print(response)
                 #endif
                 self.state = .authenticated
+                
                 break
             case .failure(let error):
                 #if DEBUG
@@ -95,6 +97,7 @@ class ShottaUser: NSObject {
                 #endif
                 break
             }
+            self.delegate?.authenticationChanged(state: self.state)
         }
 
     }
@@ -103,4 +106,7 @@ class ShottaUser: NSObject {
 enum ShottaState {
     case authenticated
     case unauthenticated
+}
+protocol ShottaUserDelegate {
+    func authenticationChanged(state: ShottaState)
 }
