@@ -75,7 +75,15 @@ class Shotta: NSObject {
                     #if DEBUG
                         print(response.result.value!)
                     #endif
-                    completionHandler(true, nil)
+                    
+                    guard let parsedResponse = response.result.value as? [String:Any]
+                        else{
+                           completionHandler(true, nil)
+                            break
+                    }
+                    if parsedResponse["errors"] != nil{
+                                            completionHandler(false, nil)
+                    }
                     break
                 case .failure(let error):
                     #if DEBUG

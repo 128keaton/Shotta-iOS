@@ -117,6 +117,37 @@ class ShottaUser: NSObject {
 
     }
     // TO-DO: Logout :P
+    
+    public func logout(completionHandler: @escaping (ShottaState, Error?) -> ()) {
+        // Special case
+        let headers: HTTPHeaders = [
+            "X-AUTH-TOKEN": self.authToken!,
+            "Accept": "application/json"
+        ]
+        
+        Alamofire.request(urlString + "sign-out", method: .delete, parameters: [:], encoding: URLEncoding.default, headers: headers).responseJSON {
+            response in
+            switch response.result {
+            case .success:
+                #if DEBUG
+                    print(response)
+                #endif
+                self.state = .unauthenticated
+                let defaults = UserDefaults.standard
+                defaults.removeObject(forKey: "auth-token")
+                defaults.synchronize()
+                completionHandler(.unauthenticated, nil)
+                break
+            case .failure(let error):
+                #if DEBUG
+                    print(error)
+                #endif
+                completionHandler(.authenticated, error)
+                break
+            }
+            self.delegate?.authenticationChanged(state: self.state)
+        }
+    }
 }
 enum ShottaState {
     case authenticated

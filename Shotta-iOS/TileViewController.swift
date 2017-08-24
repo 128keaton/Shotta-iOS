@@ -8,10 +8,9 @@
 
 import Foundation
 import UIKit
+import Agrume
 
 class TileViewController: UICollectionViewController, ShottaDelegate, UIImagePickerControllerDelegate, ShottaUserDelegate {
-
-
     // Properties
     fileprivate var images: [[String: Any]]? = [[:]]
     fileprivate let imagePicker = UIImagePickerController()
@@ -32,6 +31,9 @@ class TileViewController: UICollectionViewController, ShottaDelegate, UIImagePic
     // Initializers
     @objc private func setupShottaUser() {
         let defaults = UserDefaults.standard
+        let stack = navigationController?.viewControllers
+        navigationController?.popToViewController(stack![0], animated: true)
+        
         if self.shottaUser == nil && defaults.object(forKey: "auth-token") != nil {
             self.shottaUser = ShottaUser(authToken: defaults.object(forKey: "auth-token") as! String)
             self.shottaUser?.setShottaDelegate(delegate: self)
@@ -80,6 +82,12 @@ class TileViewController: UICollectionViewController, ShottaDelegate, UIImagePic
     }
 
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showSettings"{
+            let settingsViewController = segue.destination as! SettingsViewController
+            settingsViewController.user = self.shottaUser
+        }
+    }
     // Delegate: Shotta
     func imagesDidUpdate(images: [[String: Any]]) {
         self.images = images
@@ -91,15 +99,11 @@ class TileViewController: UICollectionViewController, ShottaDelegate, UIImagePic
         if state == .authenticated {
             self.shottaUser?.loadImages()
         } else {
+            let defaults = UserDefaults.standard
+            defaults.removeObject(forKey: "auth-token")
+            defaults.synchronize()
+            self.shottaUser = nil
             setupShottaUser()
-        }
-    }
-
-    // I am lazy
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let touch: UITouch? = touches.first
-        if touch?.view?.tag == 101 {
-            touch?.view?.removeFromSuperview()
         }
     }
 
@@ -126,17 +130,30 @@ class TileViewController: UICollectionViewController, ShottaDelegate, UIImagePic
     }
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let imageView = UIImageView(frame: collectionView.frame)
-        imageView.contentMode = .scaleAspectFit
-        imageView.tag = 101
-        imageView.isUserInteractionEnabled = true
-        imageView.backgroundColor = UIColor.black
+        let cell = collectionView.cellForItem(at: indexPath) as! TileCell
+        let image = cell.imageView.image
+        let agrume = Agrume(image: image!, backgroundBlurStyle: .dark)
+        
+        let imageParent = images![indexPath.row]
+        let imageId = "\(String(describing: imageParent["id"]))"
 
-        let cell = self.collectionView?.cellForItem(at: indexPath) as! TileCell
-        imageView.image = cell.imageView.image
-        self.view.addSubview(imageView)
+        agrume.metadata = [0: ["url": "http://shotta.128keaton.com/view/\(imageId)"]]
+        
+        agrume.didTapActivityButton = { image, metadata in
+            #if DEBUG
+                print(metadata ?? "No metadata")
+            #endif
+            self.displayShareSheet(items: [image, URL(string: metadata!["url"] as! String)!], onView: agrume)
+        }
+        agrume.useToolbar = true
+        agrume.statusBarStyle = UIStatusBarStyle.lightContent
+        agrume.showFrom(self.parent!, backgroundSnapshotVC: self.parent)
     }
 
+    func displayShareSheet(items: [ Any], onView: UIViewController){
+        let activityViewController = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        onView.present(activityViewController, animated: true, completion: {})
+    }
     // Delegate: UIImagePickerController
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
         if let editedImage = info[UIImagePickerControllerEditedImage] as? UIImage {
